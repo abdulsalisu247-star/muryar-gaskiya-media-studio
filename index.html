@@ -4,57 +4,321 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Muryar Gaskiya Media Studio offers professional voiceover, content creation, cartoon animation, advertising, NIN enrolment assistance and printing services.">
   <title>Muryar Gaskiya Media Studio</title>
+
   <style>
+    * {
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
     body {
       margin: 0;
       font-family: Arial, sans-serif;
       background: #101010;
       color: white;
-      text-align: center;
+      line-height: 1.6;
     }
+
     header {
       background: #087443;
-      padding: 25px 10px;
+      padding: 25px 15px;
+      text-align: center;
     }
-    h1 { margin-bottom: 8px; }
-    main { padding: 45px 20px; }
+
+    header h1 {
+      margin: 0;
+      font-size: clamp(25px, 5vw, 42px);
+    }
+
+    header p {
+      margin: 5px 0 0;
+      font-size: 18px;
+    }
+
+    nav {
+      background: #171717;
+      padding: 15px 8px;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 18px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      color: #35d68b;
+    }
+
+    .hero {
+      padding: 65px 20px;
+      text-align: center;
+      background: #101010;
+    }
+
+    .hero h2 {
+      font-size: clamp(28px, 5vw, 40px);
+      line-height: 1.2;
+    }
+
+    .hero p {
+      max-width: 650px;
+      margin: 20px auto;
+      color: #dddddd;
+      font-size: 18px;
+    }
+
     .button {
       display: inline-block;
       background: #087443;
       color: white;
-      padding: 14px 22px;
-      border-radius: 6px;
+      padding: 13px 22px;
+      margin: 8px;
+      border-radius: 7px;
       text-decoration: none;
-      margin-top: 15px;
+      font-weight: bold;
     }
+
+    .button:hover {
+      background: #099457;
+    }
+
+    section {
+      padding: 45px 20px;
+      text-align: center;
+    }
+
+    section h2 {
+      font-size: 30px;
+      margin-top: 0;
+    }
+
+    .intro {
+      max-width: 700px;
+      margin: 0 auto 25px;
+      color: #cccccc;
+    }
+
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 18px;
+      max-width: 1050px;
+      margin: auto;
+    }
+
+    .service-card {
+      background: #1c1c1c;
+      border: 1px solid #333333;
+      border-radius: 10px;
+      padding: 24px 18px;
+    }
+
+    .service-card .symbol {
+      font-size: 35px;
+    }
+
+    .service-card h3 {
+      color: #35d68b;
+      margin: 10px 0;
+    }
+
+    .service-card p {
+      color: #cccccc;
+      margin-bottom: 0;
+    }
+
+    #about {
+      background: #181818;
+    }
+
+    #about p {
+      max-width: 700px;
+      margin: auto;
+      color: #dddddd;
+    }
+
+    #contact {
+      background: #10271c;
+    }
+
     footer {
-      padding: 20px;
-      color: #ccc;
+      background: #080808;
+      color: #cccccc;
+      text-align: center;
+      padding: 22px 12px;
+    }
+
+    @media (max-width: 480px) {
+      nav {
+        gap: 12px;
+      }
+
+      nav a {
+        font-size: 14px;
+      }
+
+      .hero {
+        padding: 45px 15px;
+      }
+
+      section {
+        padding: 35px 15px;
+      }
     }
   </style>
 </head>
+
 <body>
+
   <header>
     <h1>MURYAR GASKIYA</h1>
     <p>MEDIA STUDIO</p>
   </header>
 
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#services">Our Services</a>
+    <a href="#about">About Us</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
   <main>
-    <h2>Your Voice. Your Story. Your Truth.</h2>
-    <p>
-      Welcome to Muryar Gaskiya Media Studio,
-      your platform for news, media, creativity
-      and community stories.
-    </p>
-    <a class="button"
-       href="https://wa.me/234">
-       Contact Us on WhatsApp
-    </a>
+    <section class="hero" id="home">
+      <h2>Your Voice. Your Vision. Our Creativity.</h2>
+
+      <p>
+        Welcome to Muryar Gaskiya Media Studio.
+        We bring ideas to life through voiceover,
+        creative content, animation, advertising,
+        printing and digital services.
+      </p>
+
+      <a class="button" href="#services">
+        Explore Our Services
+      </a>
+
+      <a class="button" href="#contact">
+        Contact Us
+      </a>
+    </section>
+
+    <section id="services">
+      <h2>Our Services</h2>
+
+      <p class="intro">
+        We provide creative and digital solutions
+        for individuals, businesses and organisations.
+      </p>
+
+      <div class="services">
+
+        <div class="service-card">
+          <div class="symbol">🎙️</div>
+          <h3>Voiceover</h3>
+          <p>
+            Professional voice recordings for adverts,
+            announcements, narration and presentations.
+          </p>
+        </div>
+
+        <div class="service-card">
+          <div class="symbol">🎬</div>
+          <h3>Content Creation</h3>
+          <p>
+            Creative video and digital content for
+            brands, businesses and social media.
+          </p>
+        </div>
+
+        <div class="service-card">
+          <div class="symbol">🎨</div>
+          <h3>Cartoon Animation</h3>
+          <p>
+            Animated stories, cartoon videos,
+            promotional animations and explainers.
+          </p>
+        </div>
+
+        <div class="service-card">
+          <div class="symbol">📢</div>
+          <h3>Advertising</h3>
+          <p>
+            Promotional adverts to help businesses,
+            products, services and events reach people.
+          </p>
+        </div>
+
+        <div class="service-card">
+          <div class="symbol">🪪</div>
+          <h3>NIN Enrolment</h3>
+          <p>
+            NIN enrolment-related services and assistance,
+            subject to applicable authorisation.
+          </p>
+        </div>
+
+        <div class="service-card">
+          <div class="symbol">🖨️</div>
+          <h3>Printing Services</h3>
+          <p>
+            Printing of documents, business materials,
+            designs and other print projects.
+          </p>
+        </div>
+
+        <div class="service-card">
+          <div class="symbol">✨</div>
+          <h3>Other Creative Services</h3>
+          <p>
+            Contact us to discuss your project and
+            discover how we can help.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="about">
+      <h2>About Our Studio</h2>
+      <p>
+        Muryar Gaskiya Media Studio is dedicated to
+        creative communication and digital services.
+        We help individuals, businesses and organisations
+        communicate their ideas through engaging media,
+        professional voiceovers, animation and advertising.
+      </p>
+    </section>
+
+    <section id="contact">
+      <h2>Let's Work Together</h2>
+
+      <p class="intro">
+        Do you need a voiceover, animation, advert,
+        printing or any of our other services?
+        Contact us today to discuss your project.
+      </p>
+
+      <!-- Replace the placeholder with your WhatsApp number -->
+      <a class="button"
+         href="https://wa.me/234YOURNUMBER"
+         target="_blank"
+         rel="noopener noreferrer">
+        Contact Us on WhatsApp
+      </a>
+    </section>
   </main>
 
   <footer>
-    &copy; 2026 Muryar Gaskiya Media Studio
+    <p>&copy; 2026 Muryar Gaskiya Media Studio</p>
+    <p>Your Voice. Your Vision. Our Creativity.</p>
   </footer>
+
 </body>
 </html>
